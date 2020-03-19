@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Open Sans',sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 25px;
+    margin-right: 20px;
+}
+.logo{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+ul li {
+    color: white;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+h1{
+    color: white;
+}
+.titre{
+    position: absolute;
+    top: 25%;
+    left: 42%;
+}
+
+article{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.countdown{
+    display: flex;
+    position: absolute;
+    top : 25%;
+    margin-top: 50px;
+}
+.countdown div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    margin: 0 15px;
+    font-size: 60px;
+}
+.countdown div:before{
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.countdown div#day:before{
+    content: 'DAYS';
+    color: white;
+}
+.countdown div#hour:before{
+    content: 'HOURS';
+    color: white;
+}
+.countdown div#minute:before{
+    content: 'MINUTES';
+    color: white;
+}
+.countdown div#second:before{
+    content: 'SECONDS';
+    color: white;
+}
+
+.computer{
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    z-index: 1;
+    animation: float 7s ease-in-out infinite;
+}
+.astro{
+    position: absolute;
+    top: 60%;
+    left: 75%;
+    z-index: -1;
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translate(-50%, -46%);
+    }
+    50% {
+        transform: translate(-50%, -54%);
+    }
+    100% {
+        transform: translate(-50%, -46%);
+    }
+}
