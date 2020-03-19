@@ -8,7 +8,7 @@ body {
     height: 100vh;
     overflow: hidden;
     background-color: black;
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 nav {
@@ -19,7 +19,8 @@ nav {
     font-size: 25px;
     margin-right: 20px;
 }
-.logo{
+
+.logo {
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -30,28 +31,31 @@ ul li {
     padding-right: 20px;
 }
 
-h1{
+h1 {
     color: white;
 }
-.titre{
+
+.titre {
     position: absolute;
     top: 25%;
     left: 42%;
 }
 
-article{
+article {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     color: white;
 }
-.countdown{
+
+.countdown {
     display: flex;
     position: absolute;
-    top : 25%;
+    top: 25%;
     margin-top: 50px;
 }
+
 .countdown div {
     position: relative;
     width: 100px;
@@ -62,7 +66,8 @@ article{
     margin: 0 15px;
     font-size: 60px;
 }
-.countdown div:before{
+
+.countdown div:before {
     content: '';
     position: absolute;
     bottom: -4px;
@@ -73,37 +78,43 @@ article{
     font-size: 20px;
     font-weight: 600;
 }
-.countdown div#day:before{
+
+.countdown div#day:before {
     content: 'DAYS';
     color: white;
 }
-.countdown div#hour:before{
+
+.countdown div#hour:before {
     content: 'HOURS';
     color: white;
 }
-.countdown div#minute:before{
+
+.countdown div#minute:before {
     content: 'MINUTES';
     color: white;
 }
-.countdown div#second:before{
+
+.countdown div#second:before {
     content: 'SECONDS';
     color: white;
 }
 
-.computer{
+.computer {
     position: absolute;
     top: 72%;
     left: 50%;
     z-index: 1;
     animation: float 7s ease-in-out infinite;
 }
-.astro{
+
+.astro {
     position: absolute;
     top: 60%;
     left: 75%;
     z-index: -1;
     animation: float 6s ease-in-out infinite;
 }
+
 @keyframes float {
     0% {
         transform: translate(-50%, -46%);
@@ -113,5 +124,36 @@ article{
     }
     100% {
         transform: translate(-50%, -46%);
+    }
+}
+
+@media (max-width: 500px) {
+    .categories {
+        margin-left: 120px;
+    }
+    .categories ul {
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .computer {
+        display: none;
+    }
+    .text {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .astro {
+        zoom: 140%;
+        top: 90 %
+    }
+    .countdown {
+        left: 17%;
+    }
+    .titre {
+        left: 50%;
     }
 }
